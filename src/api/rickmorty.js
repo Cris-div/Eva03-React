@@ -7,12 +7,12 @@ export const getCharacters = async (page = 1) => {
   return data.results;
 };
 
-export const getLocations = async () => {
-  const { data } = await axios.get(`${BASE_URL}/location`);
+export const getLocations = async (page = 1 ) => {
+  const { data } = await axios.get(`${BASE_URL}/location?page=${page}`);
   return data.results;
 };
 
-export const getEpisodes = async () => {
-  const { data } = await axios.get(`${BASE_URL}/episode`);
+export const getEpisodes = async (page=1) => {
+  const { data } = await axios.get(`${BASE_URL}/episode?page=${page}`);
   return data.results;
 };
